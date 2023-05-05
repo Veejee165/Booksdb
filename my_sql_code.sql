@@ -15,7 +15,9 @@ CREATE TABLE IF NOT EXISTS nocount(
   cno INTEGER,
   number INTEGER,
   id CHAR(13),
-  PRIMARY KEY(id)
+  bookid INTEGER,
+  PRIMARY KEY(id),
+  FOREIGN KEY (bookid) REFERENCES books(bookid)
 );
 
 CREATE TRIGGER IF NOT EXISTS check_number
