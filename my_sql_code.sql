@@ -2,13 +2,13 @@ DROP TABLE IF EXISTS books;
 DROP TABLE IF EXISTS nocount;
 
 CREATE TABLE IF NOT EXISTS books (
+  bookid INTEGER PRIMARY KEY AUTOINCREMENT,
   year INTEGER,
   title VARCHAR(30),
   author VARCHAR(30),
   course VARCHAR(20),
   id CHAR(13),
-  number INTEGER,
-  PRIMARY KEY(year, course, id)
+  number INTEGER
 );
 
 CREATE TABLE IF NOT EXISTS nocount(
