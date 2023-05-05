@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+    margin:0;
+   padding:0;
+   height:100%;
+  background-image: url('https://images.unsplash.com/photo-1518825059470-fce76c93d450?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border-radius: 4px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}
+</style>
+  <title>Search Results</title>
+</head>
+<body>
+<h1>Search Results</h1>
+{% if books %}
+<ul>
+  {% for book in books %}
+  <li> {{ book[1] }} by {{ book[2] }}</li>
+  <li> Contact No - {{ book[5] }}</li>
+  <hr>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No books found.</p>
+{% endif %}
+
+<div class="row">
+  <div class="col-lg-12">
+    <a href="{{ url_for('home') }}" class="button" >Back to Home</a>
+  </div>
+</div>
+
+</body>
+</html>
+
+
