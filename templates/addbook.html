@@ -4,19 +4,20 @@
   <style>
       body {
     margin:0;
-   padding:0;
+   padding-left:30px;
    height:100%;
   background-image: url('https://images.unsplash.com/photo-1518825059470-fce76c93d450?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
 }
+
   </style>
   <title>Add a Book</title>
 </head>
 <body>
 <h1>Add a Book</h1>
-<form method="POST" action="{{ url_for('add_book') }}">
+<form method="POST" action="{{ url_for('add_book') }}" class="tt">
   <label for="itle">Title:</label>
   <input type="text" id="itle" name="itle" required><br><br>
   <label for="author">Author:</label>
