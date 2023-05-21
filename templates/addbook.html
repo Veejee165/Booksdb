@@ -3,34 +3,76 @@
 <head>
   <style>
       body {
+      font-family: 'Nunito', sans-serif;
     margin:0;
    padding-left:30px;
    height:100%;
-  background-image: url('https://images.unsplash.com/photo-1518825059470-fce76c93d450?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80');
+  background-image: url('https://images.unsplash.com/photo-1516979187457-637abb4f9353?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
 }
+.container {
+	max-width:300px;
+	width:100%;
+	left:10px;
+	position:relative;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+fieldset {
+	border: medium none !important;
+	margin: 0 0 10px;
+	min-width: 100%;
+	padding: 0;
+	width: 100%;
+}
+input {
+    width: 250px;
+    padding: 0px 10px;
+}
+input,
+input::-webkit-input-placeholder {
+    font-size: 15px;
+    line-height: 2;
+}
+input.c {
+font-size: 18px;
+color:#0A3D5B;
+  text-align: center;
+  font-style: normal;
+margin: 11px 19px;
+max-width:100px;
+    background-image: linear-gradient(0, #0A3D5B, #0A3D5B);
+    background-size: 0;
+    transition: .5s;
+    background-repeat: no-repeat;
+    padding: 7px 10px;
+}
+
+input.c:hover {
+    background-size: 100%;
+    color: #fff;
+}
+h1{
+color: #0A3D5B;
+}
+
 
   </style>
   <title>Add a Book</title>
 </head>
 <body>
-<h1>Add a Book</h1>
+<div class="container">
+  <h1>Add a Book</h1>
 <form method="POST" action="{{ url_for('add_book') }}" class="tt">
-  <label for="itle">Title:</label>
-  <input type="text" id="itle" name="itle" required><br><br>
-  <label for="author">Author:</label>
-  <input type="text" id="author" name="author" required><br><br>
-  <label for="cid">College Id:</label>
-  <input type="text" id="cid" name="cid" required><br><br>
-  <label for="course">Course :</label>
-  <input type="text" id="course" name="course" required><br><br>
-  <label for="ayear">Year :</label><br>
-  <input type="number" id="ayear" name="ayear" required><br><br>
-  <label for="number">Contact no::</label><br>
-  <input type="number" id="number" name="number" required><br><br>
-  <input type="submit" value="Submit">
-</form>
+  <fieldset><input type="text" id="itle" name="itle" required placeholder="Book Title"><br><br></fieldset>
+  <fieldset><input type="text" id="author" name="author" required placeholder="Book Author"><br><br></fieldset>
+  <fieldset><input type="text" id="cid" name="cid" required placeholder="College Id"><br><br></fieldset>
+  <fieldset><input type="text" id="course" name="course" required placeholder="Course Name"><br><br></fieldset>
+  <fieldset><input type="number" id="ayear" name="ayear" required placeholder="Course Year"><br><br></fieldset>
+  <fieldset><input type="number" id="number" name="number" required placeholder="Your Contact No"><br><br></fieldset>
+  <input type="submit" value="Submit" class="c">
+</form></div>
 </body>
 </html>
