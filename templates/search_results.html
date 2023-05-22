@@ -64,8 +64,8 @@ color:#2a5050;
 {% if books %}
 <ul>
   {% for book in books %}
-  <li> {{ book[2] }} by {{ book[3] }}</li>
-  <li> Contact No - {{ book[6] }}</li>
+  <li style="font-size:18px"> {{ book[2] }} by {{ book[3] }}
+  <br> <p style="font-size:15px"> Contact No - {{ book[6] }}</li>
   <hr style="width:50%;text-align:left;margin-left:0">
   {% endfor %}
 </ul>
