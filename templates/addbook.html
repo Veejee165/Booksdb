@@ -57,22 +57,30 @@ input.c:hover {
 h1{
 color: #0A3D5B;
 }
-
-
   </style>
   <title>Add a Book</title>
 </head>
 <body>
 <div class="container">
   <h1>Add a Book</h1>
-<form method="POST" action="{{ url_for('add_book') }}" class="tt">
+<form method="POST" action="javascript:void(0);" class="tt" id="myForm">
   <fieldset><input type="text" id="itle" name="itle" required placeholder="Book Title"><br><br></fieldset>
   <fieldset><input type="text" id="author" name="author" required placeholder="Book Author"><br><br></fieldset>
   <fieldset><input type="text" id="cid" name="cid" required placeholder="College Id"><br><br></fieldset>
   <fieldset><input type="text" id="course" name="course" required placeholder="Course Name"><br><br></fieldset>
   <fieldset><input type="number" id="ayear" name="ayear" required placeholder="Course Year"><br><br></fieldset>
   <fieldset><input type="number" id="number" name="number" required placeholder="Your Contact No"><br><br></fieldset>
-  <input type="submit" value="Submit" class="c">
+  <input type="submit" value="Submit" class="c" onclick="javascript:completeAndRedirect();">
 </form></div>
+<script>
+function completeAndRedirect(){
+    var r = confirm("Your form has been succesfully submitted");
+    if (r == true) {
+        document.getElementById("myForm").action = "http://127.0.0.1:5000/add_book";
+       document.getElementById("myForm").submit();
+    }
+    }
+</script>
+
 </body>
 </html>

@@ -27,26 +27,6 @@
    width:100%;
    height:60px;
 }
-.popup {
-visibility: hidden;
-text-align: center;
-}
-.popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s
-}
-
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
-}
 </style>
 </head>
 <body>
@@ -57,6 +37,12 @@ text-align: center;
             <ul class="navbar-nav mr-auto">
                 <a href="{{ url_for('add_book') }}" class="nav-item active nav-link" onmouseover="this.style.background='cadetblue';" onmouseleave="this.style.background='#343a40';">Add a Book</a>
             </ul>
+        </div>
+        <div class="ml-auto order-0">
+            <a class="navbar-brand ml-auto" href="#" onmouseover="this.style.background='cadetblue';" onmouseleave="this.style.background='#343a40';" >About Us</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2" style="margin:10px;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
         </div>
     </nav> 
   </div>
