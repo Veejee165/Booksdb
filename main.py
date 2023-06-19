@@ -55,7 +55,6 @@ def home():
     else:
         return render_template('home.html')
 
-
 @app.route('/add_book', methods=['GET', 'POST'])
 def add_book():
     if request.method == 'POST':
@@ -73,7 +72,6 @@ def add_book():
         return redirect(url_for('home'))
     else:
         return render_template('addbook.html')
-
 
 # run Flask app
 if __name__ == '__main__':

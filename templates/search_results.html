@@ -1,63 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style>
-    body {
-    margin:0;
-   height:100%;
-  background-image: url('https://images.unsplash.com/photo-1518825059470-fce76c93d450?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-  padding-left:30px;
-}
-h1{
-color:#2a5050;
-}
-.button {
-	display:inline-block;
-	padding:10px 20px;
-	margin:5px;
-	position: relative;
-    color:#2a5050;
-    font-weight:300;
-    font-size:18px;
-    text-decoration:none;
-  &:before, &:after {
-    content:"";
-	background-color: #63C5DA;
-    z-index:-1;
-  }
-	&:before {
-		width:0%;
-		height:2%;
-		position: absolute;
-		top:49%;
-		left:0;
-		transition: width .2s cubic-bezier(.53,0,.41,1);
-	}
-	&:after {
-		width:100%;
-		height:0%;
-		position: absolute;
-		top:50%;
-		left:0;
-		transition: .3s cubic-bezier(.53,0,.41,1);
-		transition-delay: .2s;
-	}
-	&:hover:before {
-		width:100%;
-	}
-	&:hover:after {
-		height:100%;
-		top:0;
-	}
-}
-.col-lg-12{
-  padding-top:20px;
-}
-</style>
   <title>Search Results</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='sres.css') }}" >
 </head>
 <body>
 <h1>Search Results</h1>
